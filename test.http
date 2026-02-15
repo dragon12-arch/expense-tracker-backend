@@ -1,0 +1,45 @@
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "123456"
+}
+
+###
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "123456"
+}
+
+
+###
+GET http://localhost:3001/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc3MTEzNjEwN30.eOkegoioHZ8oVTmA222fsLfmO6peOR95ndSzEB-E2MU
+
+###
+POST http://localhost:3001/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc3MTEzNjEwN30.eOkegoioHZ8oVTmA222fsLfmO6peOR95ndSzEB-E2MU
+Content-Type: application/json
+
+{
+  "title": "Groceries",
+  "amount": 500,
+  "category": "Food",
+  "date": "2025-09-20"
+}
+
+###
+GET http://localhost:3001/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc3MTEzNjEwN30.eOkegoioHZ8oVTmA222fsLfmO6peOR95ndSzEB-E2MU
+
+###
+DELETE http://localhost:3001/transactions/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc3MTEzNjEwN30.eOkegoioHZ8oVTmA222fsLfmO6peOR95ndSzEB-E2MU
+
+###
+GET http://localhost:3001/transactions?category=Food
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc3MTEzNjEwN30.eOkegoioHZ8oVTmA222fsLfmO6peOR95ndSzEB-E2MU
