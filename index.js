@@ -10,10 +10,9 @@ const cors = require("cors")
 const app = express()
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://your-frontend-url.vercel.app"
-    ],
+    origin: "*", // temporarily allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: false,
   })
 )
 app.use(express.json())
