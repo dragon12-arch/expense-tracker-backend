@@ -204,3 +204,7 @@ app.delete("/transactions/:id", authenticateToken, async (req, res) => {
 
   res.send("Transaction Deleted Successfully")
 })
+
+  app.listen(process.env.PORT || 3001, () => {
+      console.log("Server Running 🚀")
+  })
