@@ -117,6 +117,11 @@ app.post("/register", async (req, res) => {
   }
 })
 
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully 🚀")
+})
+
+
 app.post("/login", async (req, res) => {
   const { username, password } = req.body
 
