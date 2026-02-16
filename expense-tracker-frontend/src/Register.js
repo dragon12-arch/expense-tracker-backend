@@ -8,7 +8,7 @@ function Register() {
   const navigate = useNavigate()
 
   const handleRegister = async () => {
-    const response = await fetch("http://localhost:3001/register", {
+    const response = await fetch("https://expense-tracker-backend.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

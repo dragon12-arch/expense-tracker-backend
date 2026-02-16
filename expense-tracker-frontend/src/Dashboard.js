@@ -23,8 +23,7 @@ useEffect(() => {
   }
 
   const fetchTransactions = async () => {
-    const response = await fetch(
-      "http://localhost:3001/transactions",
+    const response = await fetch("https://expense-tracker-backend.onrender.com/transactions",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -43,8 +42,7 @@ useEffect(() => {
 
 
   const fetchTransactions = async () => {
-    const response = await fetch(
-      "http://localhost:3001/transactions",
+    const response = await fetch("https://expense-tracker-backend.onrender.com/transactions",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -59,8 +57,7 @@ useEffect(() => {
   }
 
   const handleDelete = async (id) => {
-  const response = await fetch(
-    `http://localhost:3001/transactions/${id}`,
+  const response = await fetch(`https://expense-tracker-backend.onrender.com/transactions/${id}`,
     {
       method: "DELETE",
       headers: {
@@ -82,8 +79,7 @@ const handleLogout = () => {
 
 
   const handleAddTransaction = async () => {
-    const response = await fetch(
-      "http://localhost:3001/transactions",
+    const response = await fetch("https://expense-tracker-backend.onrender.com/transactions",
       {
         method: "POST",
         headers: {
