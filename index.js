@@ -8,13 +8,8 @@ const cors = require("cors")
 
 
 const app = express()
-app.use(
-  cors({
-    origin: "*", // temporarily allow all origins
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: false,
-  })
-)
+app.use(cors())
+app.options("*", cors()) 
 app.use(express.json())
 
 const dbPath = path.join(__dirname, "database.db")
